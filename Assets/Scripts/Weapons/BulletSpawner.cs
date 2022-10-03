@@ -6,7 +6,7 @@ public class BulletSpawner : MonoBehaviour
 {  
     [SerializeField] private BulletData bulletData;  
     [SerializeField] private Transform bulletContainer;  
-    [SerializeField] private Collider col;
+    [SerializeField] private Collider2D col;
     
     public void Spawn(Transform barrel, PropertyName bulletName)  
     {  
@@ -14,7 +14,7 @@ public class BulletSpawner : MonoBehaviour
         var bullet = Instantiate(spawnBullet.bulletPrefab.gameObject, barrel.position, barrel.rotation);  
         bullet.transform.parent = bulletContainer;  
         if(col != null)  
-            Physics.IgnoreCollision(bullet.GetComponent<SphereCollider>(), col);  
+            Physics2D.IgnoreCollision(bullet.GetComponent<Collider2D>(), col);  
     }  
     public void SpawnAttached(Transform barrel, PropertyName bulletName)  
     {  

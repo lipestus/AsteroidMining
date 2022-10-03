@@ -17,6 +17,7 @@ public class WeaponComponent : MonoBehaviour
     [Header("FIRE LOGIC")] 
     [SerializeField] [Range(0.1f,10)]private float fireRate;
     
+    
     private Vector3 mousePosition;
     private float lastShot = 0.0f;
     private BulletSpawner bulletSpawner;
@@ -27,7 +28,7 @@ public class WeaponComponent : MonoBehaviour
     }
     void Update()
     {
-        mousePosition = GameplayUtils.GetMouseWorldPosition3D();
+        mousePosition = GameplayUtils.GetMouseWorldPosition();
         if (input.isFiring)
         {
             if (Time.time > fireRate + lastShot)
@@ -45,8 +46,8 @@ public class WeaponComponent : MonoBehaviour
     private void RotateGunTowardsPoint(Vector3 point, float rotationSpeed)
     {
         Vector3 aimDirection = (point - aimTransform.position).normalized;
-        float angle = Mathf.Atan2(aimDirection.x, aimDirection.z) * Mathf.Rad2Deg;
-        Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.up);
+        float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
+        Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         aimTransform.rotation = Quaternion.Slerp(aimTransform.rotation, rotation,
             rotationSpeed * Time.deltaTime);
     }

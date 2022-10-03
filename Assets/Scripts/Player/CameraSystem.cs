@@ -10,9 +10,10 @@ namespace AsteroidMining.PlayerController
         [SerializeField] private Vector3 offset;
         [Range(1, 10)] [SerializeField] private float smoothFollow = 8f;
         [Range(1, 10)] [SerializeField] private float smoothShift = 8f;
+        private float zAxis => -10;
         [SerializeField] private InputHandler playerConfig;
-        private Vector3 focusPosition => new Vector3(follow.position.x, 50f, follow.position.z) 
-                                         + new Vector3(offset.x, offset.y, offset.z);
+        private Vector3 focusPosition => new Vector3(follow.position.x, follow.position.y, -10) 
+                                         + new Vector3(offset.x, offset.y, zAxis);
         private float delay = 1f;
         private void LateUpdate()
         {
@@ -22,7 +23,7 @@ namespace AsteroidMining.PlayerController
             {
                 if (playerConfig.move.y > 0)
                 {
-                    ShiftCamera(10f, smoothShift);
+                    ShiftCamera(3f, smoothShift);
                     Invoke(nameof(ResetValue), 1f);
                 }
                 else if (playerConfig.move.y < 1)
@@ -52,7 +53,8 @@ namespace AsteroidMining.PlayerController
         }
         private void ShiftCamera(float amount, float pace)
         {
-            Vector3 smoothShiftVector = Vector3.Lerp(offset, new Vector3(offset.x, offset.y, amount), pace * Time.deltaTime);
+            Vector3 smoothShiftVector = Vector3.Lerp(offset, 
+                new Vector3(offset.x, amount, offset.z), pace * Time.deltaTime);
             offset = smoothShiftVector;
         }
         private void ResetValue()
