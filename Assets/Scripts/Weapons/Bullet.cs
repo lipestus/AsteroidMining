@@ -13,7 +13,7 @@ public class Bullet : MonoBehaviour
     public TypeBullet typeBullet;
     public float bulletDamage = 1f;
     public float speed;
-    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Rigidbody rb;
     public float lifeTime = 2f;
     [SerializeField] private bool animatedSprite;
 
@@ -28,7 +28,7 @@ public class Bullet : MonoBehaviour
             Destroy(this.gameObject);
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter(Collider other)
     {
         IDamageable damageable = other.gameObject.GetComponent<IDamageable>();
         if (damageable != null)
@@ -48,7 +48,6 @@ public class Bullet : MonoBehaviour
             damageable.Damage(bulletDamage, typeBullet, velocity);
             rb.velocity = Vector2.zero;
             if (animatedSprite) return;
-            this.GetComponent<SpriteRenderer>().enabled = false;
         }
 
         IImpactable impactable = other.gameObject.GetComponent<IImpactable>();

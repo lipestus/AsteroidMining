@@ -17,7 +17,6 @@ public class WeaponComponent : MonoBehaviour
     [Header("FIRE LOGIC")] 
     [SerializeField] [Range(0.1f,10)]private float fireRate;
     
-    
     private Vector3 mousePosition;
     private float lastShot = 0.0f;
     private BulletSpawner bulletSpawner;
@@ -28,7 +27,7 @@ public class WeaponComponent : MonoBehaviour
     }
     void Update()
     {
-        mousePosition = GameplayUtils.GetMouseWorldPosition();
+        mousePosition = GameplayUtils.GetMouseWorldPosition3D();
         if (input.isFiring)
         {
             if (Time.time > fireRate + lastShot)

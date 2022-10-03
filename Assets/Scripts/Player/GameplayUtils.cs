@@ -7,6 +7,15 @@ namespace AsteroidMining.GameUtils
 {
     public class GameplayUtils
     {
+        public static Vector3 GetMouseWorldPosition3D()
+        {
+            Vector3 mousePosition = Vector3.zero;
+            Ray ray = UnityEngine.Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
+            if (Physics.Raycast(ray, out RaycastHit hit))
+                mousePosition = hit.point;
+
+            return mousePosition;
+        }
         public static Vector3 GetMouseWorldPosition()
         {
             Vector3 vec = GetMouseWorldPositionWithZ(Mouse.current.position.ReadValue(), UnityEngine.Camera.main);
