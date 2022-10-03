@@ -35,7 +35,7 @@ namespace AsteroidMining.PlayerController
             
             easeInValue = thrustInput * GameUtils.Easing.QuadEaseIn(currentTime, 0, thrust, 0.3f);
             easeInValue = Mathf.Clamp(easeInValue, 0, thrust);
-            Debug.Log($"<color=cyan>easeInValue: {easeInValue} </color>");
+            //Debug.Log($"<color=cyan>easeInValue: {easeInValue} </color>");
         }
 
         private void FixedUpdate()
