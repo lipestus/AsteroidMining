@@ -1,4 +1,5 @@
 ﻿using AsteroidMining.GameUtils;
+using UnityEditor;
 using UnityEngine;
 
 namespace AsteroidMining.PlayerController
@@ -47,9 +48,7 @@ namespace AsteroidMining.PlayerController
         }
         private void SmoothFollow()
         {
-            //Vector3 smoothTransition = Vector3.Lerp(transform.position, focusPosition, smoothFollow * Time.deltaTime);
-            Vector3 smoothTransition =
-                GameplayUtils.Lerp(transform.position, focusPosition, Time.deltaTime, smoothFollow);
+            Vector3 smoothTransition = Vector3.Lerp(transform.position, focusPosition, smoothFollow * Time.deltaTime);
             // float clampedX = Mathf.Clamp(smoothTransition.x, 
             //     confinerBox.bounds.min.x + cameraBox.size.x / 2, 
             //     confinerBox.bounds.max.x - cameraBox.size.x / 2);
