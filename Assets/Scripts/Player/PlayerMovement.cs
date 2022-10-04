@@ -9,9 +9,9 @@ namespace AsteroidMining.PlayerController
     public class PlayerMovement : MonoBehaviour
     {
         [SerializeField] private InputHandler input;
-        [SerializeField] private Rigidbody2D rb;
-        [Range(1, 250)] public float thrust;
-        [Range(1, 100)] public float turnSpeed;
+        [SerializeField] private Rigidbody rb;
+        [Range(1, 500)] public float thrust;
+        [Range(1, 500)] public float turnSpeed;
 
         private float thrustInput;
         private float turnInput;
@@ -27,7 +27,7 @@ namespace AsteroidMining.PlayerController
         {
             thrustInput = input.move.y;
             turnInput = input.rotationValue.x;
-            transform.Rotate(-Vector3.forward * turnInput * turnSpeed * Time.deltaTime);
+            
             if(thrustInput > 0)
                 currentTime += Time.deltaTime;
             else
@@ -40,7 +40,8 @@ namespace AsteroidMining.PlayerController
 
         private void FixedUpdate()
         {
-            rb.AddForce(transform.up * easeInValue * Time.deltaTime);
+            transform.Rotate(Vector3.up * turnInput * turnSpeed * Time.fixedDeltaTime);
+            rb.AddForce(transform.forward * easeInValue * Time.fixedDeltaTime);
         }
     }
 }

@@ -19,7 +19,7 @@ public class Bullet : MonoBehaviour
 
     public void OnEnable()
     {
-        rb.velocity = transform.right * speed;
+        rb.velocity = transform.forward * speed;
     }
 
     private void Update()

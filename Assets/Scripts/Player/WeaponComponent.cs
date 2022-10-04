@@ -45,8 +45,8 @@ public class WeaponComponent : MonoBehaviour
     private void RotateGunTowardsPoint(Vector3 point, float rotationSpeed)
     {
         Vector3 aimDirection = (point - aimTransform.position).normalized;
-        float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
-        Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        float angle = Mathf.Atan2(aimDirection.x, aimDirection.z) * Mathf.Rad2Deg;
+        Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.up);
         aimTransform.rotation = Quaternion.Slerp(aimTransform.rotation, rotation,
             rotationSpeed * Time.deltaTime);
     }
