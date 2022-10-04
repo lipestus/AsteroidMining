@@ -18,6 +18,7 @@ namespace AsteroidMining.PlayerController
         private Vector2 testVector;
         private float easeInValue;
         private float currentTime;
+        private float turnTimeElapsed;
 
         private void Start()
         {
@@ -33,7 +34,7 @@ namespace AsteroidMining.PlayerController
             else
                 currentTime = 0;
             
-            easeInValue = thrustInput * GameUtils.Easing.QuadEaseIn(currentTime, 0, thrust, 0.3f);
+            easeInValue = thrustInput * GameUtils.Easing.QuadEaseIn(currentTime, 0, thrust, 0.1f);
             easeInValue = Mathf.Clamp(easeInValue, 0, thrust);
             //Debug.Log($"<color=cyan>easeInValue: {easeInValue} </color>");
         }
