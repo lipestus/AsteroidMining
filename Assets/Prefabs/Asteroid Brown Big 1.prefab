@@ -35,8 +35,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6571168965553510665}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.7666667, y: -1.4825581, z: 0}
-  m_LocalScale: {x: 0.0002614379, y: 0.00025839792, z: 1}
+  m_LocalPosition: {x: -1.7333333, y: -1.4496124, z: 0}
+  m_LocalScale: {x: 0.0002614379, y: 0.00025839795, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6571168965718872456}
@@ -414,6 +414,8 @@ GameObject:
   - component: {fileID: 6571168965718872461}
   - component: {fileID: 6571168965718872458}
   - component: {fileID: 6571168965718872459}
+  - component: {fileID: 1322064361}
+  - component: {fileID: 1322064362}
   m_Layer: 0
   m_Name: Asteroid Brown Big 1
   m_TagString: Untagged
@@ -428,7 +430,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6571168965718872454}
-  m_LocalRotation: {x: 0, y: 0, z: -0.9984481, w: 0.055691604}
+  m_LocalRotation: {x: 0, y: 0, z: -0.9984481, w: 0.055690795}
   m_LocalPosition: {x: 10.49, y: -0.85, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -477,7 +479,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 200
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5282,7 +5284,7 @@ MonoBehaviour:
     rgba: 0
   alphaWidth: 53
   alphaHeight: 45
-  alphaCount: -1
+  alphaCount: 1537
   originalAlphaCount: 1537
   alphaOffset: {x: -1.7666667, y: -1.4825581}
   alphaScale: {x: 3.5333333, y: 2.9651163}
@@ -5339,232 +5341,155 @@ MonoBehaviour:
     - Collider: {fileID: 6571168965553510674}
       Outside:
         Points:
-        - {x: 1530, y: 228}
-        - {x: 1275, y: 315}
-        - {x: 1020, y: 461}
-        - {x: 306, y: 1020}
-        - {x: 317, y: 1275}
-        - {x: 765, y: 1792}
-        - {x: 1020, y: 2007}
-        - {x: 1275, y: 2068}
-        - {x: 1956, y: 1785}
-        - {x: 2040, y: 1735}
-        - {x: 2241, y: 1530}
-        - {x: 2232, y: 1275}
-        - {x: 1849, y: 510}
-        - {x: 1785, y: 420}
-        - {x: 1577, y: 255}
-        Left: {x: 306, y: 1020}
+        - {x: 7905, y: 7905}
+        - {x: 7905, y: 10710}
+        - {x: 7905, y: 10960}
+        - {x: 9435, y: 10945}
+        - {x: 9690, y: 10840}
+        - {x: 9810, y: 10710}
+        - {x: 11650, y: 7905}
+        - {x: 8160, y: 7905}
+        Left: {x: 7905, y: 10960}
       Holes: []
   - Shapes:
     - Collider: {fileID: 6571168965553510675}
       Outside:
         Points:
-        - {x: 1530, y: 228}
-        - {x: 1275, y: 315}
-        - {x: 1020, y: 461}
-        - {x: 306, y: 1020}
-        - {x: 317, y: 1275}
-        - {x: 765, y: 1792}
-        - {x: 1020, y: 2007}
-        - {x: 1275, y: 2068}
-        - {x: 1956, y: 1785}
-        - {x: 2040, y: 1735}
-        - {x: 2241, y: 1530}
-        - {x: 2232, y: 1275}
-        - {x: 1849, y: 510}
-        - {x: 1785, y: 420}
-        - {x: 1577, y: 255}
-        Left: {x: 306, y: 1020}
+        - {x: 7905, y: 7905}
+        - {x: 7905, y: 10710}
+        - {x: 7905, y: 10960}
+        - {x: 9435, y: 10945}
+        - {x: 9690, y: 10840}
+        - {x: 9810, y: 10710}
+        - {x: 11650, y: 7905}
+        - {x: 8160, y: 7905}
+        Left: {x: 7905, y: 10960}
       Holes: []
   - Shapes:
     - Collider: {fileID: 6571168965553510672}
       Outside:
         Points:
-        - {x: 1530, y: 228}
-        - {x: 1275, y: 315}
-        - {x: 1020, y: 461}
-        - {x: 306, y: 1020}
-        - {x: 317, y: 1275}
-        - {x: 765, y: 1792}
-        - {x: 1020, y: 2007}
-        - {x: 1275, y: 2068}
-        - {x: 1956, y: 1785}
-        - {x: 2040, y: 1735}
-        - {x: 2241, y: 1530}
-        - {x: 2232, y: 1275}
-        - {x: 1849, y: 510}
-        - {x: 1785, y: 420}
-        - {x: 1577, y: 255}
-        Left: {x: 306, y: 1020}
+        - {x: 7905, y: 7905}
+        - {x: 7905, y: 10710}
+        - {x: 7905, y: 10960}
+        - {x: 9435, y: 10945}
+        - {x: 9690, y: 10840}
+        - {x: 9810, y: 10710}
+        - {x: 11650, y: 7905}
+        - {x: 8160, y: 7905}
+        Left: {x: 7905, y: 10960}
       Holes: []
   - Shapes:
     - Collider: {fileID: 6571168965553510673}
       Outside:
         Points:
-        - {x: 1530, y: 228}
-        - {x: 1275, y: 315}
-        - {x: 1020, y: 461}
-        - {x: 306, y: 1020}
-        - {x: 317, y: 1275}
-        - {x: 765, y: 1792}
-        - {x: 1020, y: 2007}
-        - {x: 1275, y: 2068}
-        - {x: 1956, y: 1785}
-        - {x: 2040, y: 1735}
-        - {x: 2241, y: 1530}
-        - {x: 2232, y: 1275}
-        - {x: 1849, y: 510}
-        - {x: 1785, y: 420}
-        - {x: 1577, y: 255}
-        Left: {x: 306, y: 1020}
+        - {x: 7905, y: 7905}
+        - {x: 7905, y: 10710}
+        - {x: 7905, y: 10960}
+        - {x: 9435, y: 10945}
+        - {x: 9690, y: 10840}
+        - {x: 9810, y: 10710}
+        - {x: 11650, y: 7905}
+        - {x: 8160, y: 7905}
+        Left: {x: 7905, y: 10960}
       Holes: []
   - Shapes:
     - Collider: {fileID: 6571168965553510670}
       Outside:
         Points:
-        - {x: 1530, y: 228}
-        - {x: 1275, y: 315}
-        - {x: 1020, y: 461}
-        - {x: 306, y: 1020}
-        - {x: 317, y: 1275}
-        - {x: 765, y: 1792}
-        - {x: 1020, y: 2007}
-        - {x: 1275, y: 2068}
-        - {x: 1956, y: 1785}
-        - {x: 2040, y: 1735}
-        - {x: 2241, y: 1530}
-        - {x: 2232, y: 1275}
-        - {x: 1849, y: 510}
-        - {x: 1785, y: 420}
-        - {x: 1577, y: 255}
-        Left: {x: 306, y: 1020}
+        - {x: 7905, y: 7905}
+        - {x: 7905, y: 10710}
+        - {x: 7905, y: 10960}
+        - {x: 9435, y: 10945}
+        - {x: 9690, y: 10840}
+        - {x: 9810, y: 10710}
+        - {x: 11650, y: 7905}
+        - {x: 8160, y: 7905}
+        Left: {x: 7905, y: 10960}
       Holes: []
   - Shapes:
     - Collider: {fileID: 6571168965553510671}
       Outside:
         Points:
-        - {x: 1530, y: 228}
-        - {x: 1275, y: 315}
-        - {x: 1020, y: 461}
-        - {x: 306, y: 1020}
-        - {x: 317, y: 1275}
-        - {x: 765, y: 1792}
-        - {x: 1020, y: 2007}
-        - {x: 1275, y: 2068}
-        - {x: 1956, y: 1785}
-        - {x: 2040, y: 1735}
-        - {x: 2241, y: 1530}
-        - {x: 2232, y: 1275}
-        - {x: 1849, y: 510}
-        - {x: 1785, y: 420}
-        - {x: 1577, y: 255}
-        Left: {x: 306, y: 1020}
+        - {x: 7905, y: 7905}
+        - {x: 7905, y: 10710}
+        - {x: 7905, y: 10960}
+        - {x: 9435, y: 10945}
+        - {x: 9690, y: 10840}
+        - {x: 9810, y: 10710}
+        - {x: 11650, y: 7905}
+        - {x: 8160, y: 7905}
+        Left: {x: 7905, y: 10960}
       Holes: []
   - Shapes:
     - Collider: {fileID: 6571168965553510668}
       Outside:
         Points:
-        - {x: 1530, y: 228}
-        - {x: 1275, y: 315}
-        - {x: 1020, y: 461}
-        - {x: 306, y: 1020}
-        - {x: 317, y: 1275}
-        - {x: 765, y: 1792}
-        - {x: 1020, y: 2007}
-        - {x: 1275, y: 2068}
-        - {x: 1956, y: 1785}
-        - {x: 2040, y: 1735}
-        - {x: 2241, y: 1530}
-        - {x: 2232, y: 1275}
-        - {x: 1849, y: 510}
-        - {x: 1785, y: 420}
-        - {x: 1577, y: 255}
-        Left: {x: 306, y: 1020}
+        - {x: 7905, y: 7905}
+        - {x: 7905, y: 10710}
+        - {x: 7905, y: 10960}
+        - {x: 9435, y: 10945}
+        - {x: 9690, y: 10840}
+        - {x: 9810, y: 10710}
+        - {x: 11650, y: 7905}
+        - {x: 8160, y: 7905}
+        Left: {x: 7905, y: 10960}
       Holes: []
   - Shapes:
     - Collider: {fileID: 6571168965553510669}
       Outside:
         Points:
-        - {x: 1530, y: 228}
-        - {x: 1275, y: 315}
-        - {x: 1020, y: 461}
-        - {x: 306, y: 1020}
-        - {x: 317, y: 1275}
-        - {x: 765, y: 1792}
-        - {x: 1020, y: 2007}
-        - {x: 1275, y: 2068}
-        - {x: 1956, y: 1785}
-        - {x: 2040, y: 1735}
-        - {x: 2241, y: 1530}
-        - {x: 2232, y: 1275}
-        - {x: 1849, y: 510}
-        - {x: 1785, y: 420}
-        - {x: 1577, y: 255}
-        Left: {x: 306, y: 1020}
+        - {x: 7905, y: 7905}
+        - {x: 7905, y: 10710}
+        - {x: 7905, y: 10960}
+        - {x: 9435, y: 10945}
+        - {x: 9690, y: 10840}
+        - {x: 9810, y: 10710}
+        - {x: 11650, y: 7905}
+        - {x: 8160, y: 7905}
+        Left: {x: 7905, y: 10960}
       Holes: []
   - Shapes:
     - Collider: {fileID: 6571168965553510666}
       Outside:
         Points:
-        - {x: 1530, y: 228}
-        - {x: 1275, y: 315}
-        - {x: 1020, y: 461}
-        - {x: 306, y: 1020}
-        - {x: 317, y: 1275}
-        - {x: 765, y: 1792}
-        - {x: 1020, y: 2007}
-        - {x: 1275, y: 2068}
-        - {x: 1956, y: 1785}
-        - {x: 2040, y: 1735}
-        - {x: 2241, y: 1530}
-        - {x: 2232, y: 1275}
-        - {x: 1849, y: 510}
-        - {x: 1785, y: 420}
-        - {x: 1577, y: 255}
-        Left: {x: 306, y: 1020}
+        - {x: 7905, y: 7905}
+        - {x: 7905, y: 10710}
+        - {x: 7905, y: 10960}
+        - {x: 9435, y: 10945}
+        - {x: 9690, y: 10840}
+        - {x: 9810, y: 10710}
+        - {x: 11650, y: 7905}
+        - {x: 8160, y: 7905}
+        Left: {x: 7905, y: 10960}
       Holes: []
   - Shapes:
     - Collider: {fileID: 6571168965553510667}
       Outside:
         Points:
-        - {x: 1530, y: 228}
-        - {x: 1275, y: 315}
-        - {x: 1020, y: 461}
-        - {x: 306, y: 1020}
-        - {x: 317, y: 1275}
-        - {x: 765, y: 1792}
-        - {x: 1020, y: 2007}
-        - {x: 1275, y: 2068}
-        - {x: 1956, y: 1785}
-        - {x: 2040, y: 1735}
-        - {x: 2241, y: 1530}
-        - {x: 2232, y: 1275}
-        - {x: 1849, y: 510}
-        - {x: 1785, y: 420}
-        - {x: 1577, y: 255}
-        Left: {x: 306, y: 1020}
+        - {x: 7905, y: 7905}
+        - {x: 7905, y: 10710}
+        - {x: 7905, y: 10960}
+        - {x: 9435, y: 10945}
+        - {x: 9690, y: 10840}
+        - {x: 9810, y: 10710}
+        - {x: 11650, y: 7905}
+        - {x: 8160, y: 7905}
+        Left: {x: 7905, y: 10960}
       Holes: []
   - Shapes:
     - Collider: {fileID: 6571168965553510664}
       Outside:
         Points:
-        - {x: 1530, y: 228}
-        - {x: 1275, y: 315}
-        - {x: 1020, y: 461}
-        - {x: 306, y: 1020}
-        - {x: 317, y: 1275}
-        - {x: 765, y: 1792}
-        - {x: 1020, y: 2007}
-        - {x: 1275, y: 2068}
-        - {x: 1956, y: 1785}
-        - {x: 2040, y: 1735}
-        - {x: 2241, y: 1530}
-        - {x: 2232, y: 1275}
-        - {x: 1849, y: 510}
-        - {x: 1785, y: 420}
-        - {x: 1577, y: 255}
-        Left: {x: 306, y: 1020}
+        - {x: 7905, y: 7905}
+        - {x: 7905, y: 10710}
+        - {x: 7905, y: 10960}
+        - {x: 9435, y: 10945}
+        - {x: 9690, y: 10840}
+        - {x: 9810, y: 10710}
+        - {x: 11650, y: 7905}
+        - {x: 8160, y: 7905}
+        Left: {x: 7905, y: 10960}
       Holes: []
   - Shapes: []
 --- !u!50 &6571168965718872463
@@ -5587,7 +5512,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 3
 --- !u!114 &6571168965718872460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5612,7 +5537,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8c5f1e1730d93a4880c460394961c48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  massPerSolidPixel: 0.01
+  massPerSolidPixel: 10
   factorInSharpness: 1
 --- !u!114 &6571168965718872458
 MonoBehaviour:
@@ -5649,7 +5574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc0880d02e57b924ab5afbb6862d3b2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
+  damage: 1
   damageMin: 0
   damageMax: 0
   alphaCount: 1
@@ -5674,3 +5599,31 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   met: 0
+--- !u!114 &1322064361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6571168965718872454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f4bbf9abb895c248917caccbfc6043a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1322064362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6571168965718872454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70db5c7b34b767d4da8411240676bfd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  threshold: 0
+  multiplier: 1
+  states: []
