@@ -335,8 +335,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   input: {fileID: 1288959950}
   rb: {fileID: 244144397}
-  thrust: 250
-  turnSpeed: 100
+  thrust: 374
+  turnSpeed: 299
 --- !u!1 &354116525
 GameObject:
   m_ObjectHideFlags: 0

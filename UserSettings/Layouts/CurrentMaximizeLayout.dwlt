@@ -524,9 +524,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.15613714, y: 0.14742288, z: -0.005375952}
+    m_Target: {x: -0.04320561, y: -0.08703032, z: -0.012313383}
     speed: 2
-    m_Value: {x: -0.15613714, y: 0.14742288, z: -0.005375952}
+    m_Value: {x: -0.04320561, y: -0.08703032, z: -0.012313383}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -577,9 +577,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 1.6435397
+    m_Target: 2.3372786
     speed: 2
-    m_Value: 1.6435397
+    m_Value: 2.3372786
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -597,7 +597,7 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -672,22 +672,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Player
+    - Assets/DinV
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scripts/Player
+  - Assets/DinV
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\lipes\Documents\Repos\AsteroidMining
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 20.600006}
-    m_SelectedIDs: f0370100
-    m_LastClickedID: 79856
-    m_ExpandedIDs: 00000000601301006213010064130100661301009213010000ca9a3b
+    m_SelectedIDs: 7c130100
+    m_LastClickedID: 70524
+    m_ExpandedIDs: 000000006013010062130100641301006613010000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -715,7 +715,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000060130100621301006413010066130100
+    m_ExpandedIDs: 000000006013010062130100641301006613010000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -742,7 +742,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 3a280100
     m_LastClickedInstanceID: 75834
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000566e000000000000ae0d0100
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -861,7 +861,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 216
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
