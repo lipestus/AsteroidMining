@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullets:
   - bulletName: Standard
-    bulletPrefab: {fileID: 5807217925250017467, guid: 4b07990bf59a94644a04fb8e5e0efba9, type: 3}
+    cwBullet: {fileID: 11414548, guid: 51353e0256839cf47aca4fa51e8bf26c, type: 3}

@@ -42,17 +42,17 @@ namespace Destructible2D.Examples
 			var hit          = Physics2D.Raycast(oldPosition, rayDirection, rayLength, RaycastMask);
 			
 			// Update old position to trail behind 
-			if (rayLength > MaxLength)
-			{
-				rayLength   = MaxLength;
-				oldPosition = newPosition - rayDirection * rayLength;
-			}
+			// if (rayLength > MaxLength)
+			// {
+			// 	rayLength   = MaxLength;
+			// 	oldPosition = newPosition - rayDirection * rayLength;
+			// }
 			
-			transform.localScale = MaxScale * CwHelper.Divide(rayLength, MaxLength);
+			//transform.localScale = MaxScale * CwHelper.Divide(rayLength, MaxLength);
 			
 			if (hit.collider != null)
 			{
-				if (string.IsNullOrEmpty(IgnoreTag) == true || hit.collider.tag != IgnoreTag)
+				if (string.IsNullOrEmpty(IgnoreTag) || !hit.collider.CompareTag(IgnoreTag))
 				{
 					if (ExplosionPrefab != null)
 					{
