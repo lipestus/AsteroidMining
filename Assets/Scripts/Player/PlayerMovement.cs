@@ -11,7 +11,7 @@ namespace AsteroidMining.PlayerController
         [SerializeField] private InputHandler input;
         [SerializeField] private Rigidbody2D rb;
         [Range(1, 500)] public float thrust;
-        [Range(1, 500)] public float turnSpeed;
+        [Range(1, 50)] public float turnSpeed;
 
         private float thrustInput;
         private float turnInput;
@@ -20,29 +20,40 @@ namespace AsteroidMining.PlayerController
         private float currentTime;
         private float turnTimeElapsed;
 
-        private void Start()
-        {
-        }
+        private Vector2 turnVector;
+        private Vector3 forwardDirection;
+        private Quaternion rotation;
+        private float minValue;
 
         private void Update()
         {
-            thrustInput = input.move.y;
-            turnInput = input.rotationValue.x;
+            float angle = Mathf.Atan2(input.rotationValue.x, input.rotationValue.y) * Mathf.Rad2Deg;
+            rotation = Quaternion.AngleAxis(-angle, Vector3.forward);
+            forwardDirection = transform.rotation * Vector3.up;
             
-            if(thrustInput > 0)
+            thrustInput = input.move.normalized.sqrMagnitude;
+
+            if (thrustInput > 0)
+            {
                 currentTime += Time.deltaTime;
+                minValue = 100f;
+            }
             else
+            {
+                minValue = 0;
                 currentTime = 0;
+            }
             
-            easeInValue = thrustInput * GameUtils.Easing.QuadEaseOut(currentTime, 0, thrust, 0.5f);
-            easeInValue = Mathf.Clamp(easeInValue, 0, thrust);
-            //Debug.Log($"<color=cyan>easeInValue: {easeInValue} </color>");
+            easeInValue = thrustInput * GameUtils.Easing.QuadEaseOut(currentTime, minValue, thrust, 1f);
+            easeInValue = Mathf.Clamp(easeInValue, minValue, thrust);
+            Debug.Log($"<color=cyan>easeInValue: {rb.velocity} </color>");
         }
 
         private void FixedUpdate()
         {
-            transform.Rotate(-Vector3.forward * turnInput * turnSpeed * Time.fixedDeltaTime);
-            rb.AddForce(transform.up * easeInValue * Time.fixedDeltaTime);
+            transform.rotation = Quaternion.Slerp(transform.rotation, rotation,
+                turnSpeed * Time.deltaTime);
+            rb.AddForce(forwardDirection * easeInValue * Time.deltaTime);
         }
     }
 }

@@ -121,6 +121,17 @@
                     "isPartOfComposite": false
                 },
                 {
+                    "name": "",
+                    "id": "ee55e27f-c0aa-4c14-8a63-591570391671",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "NormalizeVector2",
+                    "groups": "Gamepad",
+                    "action": "Aim",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
                     "name": "AD",
                     "id": "c08eb891-c4b4-4fdd-8b43-e4e69737dbe5",
                     "path": "2DVector",

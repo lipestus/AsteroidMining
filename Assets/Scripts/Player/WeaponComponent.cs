@@ -17,7 +17,6 @@ public class WeaponComponent : MonoBehaviour
     [Header("FIRE LOGIC")] 
     [SerializeField] [Range(0.1f,10)]private float fireRate;
     
-    
     private Vector3 mousePosition;
     private float lastShot = 0.0f;
     private BulletSpawner bulletSpawner;
@@ -40,7 +39,10 @@ public class WeaponComponent : MonoBehaviour
     }
     private void LateUpdate()
     {
-        RotateGunTowardsPoint(mousePosition, rotationSpeed);
+        float angle = Mathf.Atan2(input.aimRotation.x, input.aimRotation.y) * Mathf.Rad2Deg;
+        Quaternion rotation = Quaternion.AngleAxis(-angle, Vector3.forward);
+        aimTransform.rotation = Quaternion.Slerp(aimTransform.rotation, rotation,
+            rotationSpeed * Time.deltaTime);
     }
 
     private void RotateGunTowardsPoint(Vector3 point, float rotationSpeed)
