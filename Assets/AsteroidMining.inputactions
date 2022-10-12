@@ -9,8 +9,8 @@
                     "name": "Move",
                     "type": "Value",
                     "id": "4e076afe-6816-40fa-9168-ed6ef437eb3c",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
+                    "expectedControlType": "Analog",
+                    "processors": "AxisDeadzone",
                     "interactions": "",
                     "initialStateCheck": true
                 },
