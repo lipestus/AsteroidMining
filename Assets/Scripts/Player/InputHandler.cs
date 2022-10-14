@@ -4,12 +4,12 @@ using UnityEngine.InputSystem;
 
 namespace AsteroidMining.PlayerController
 {
-    public class InputHandler : MonoBehaviour
+    public class InputHandler : MonoBehaviour, IInputHandler
     {
-        public Vector2 rotationValue { get; private set; }
-        public Vector2 move{ get; private set; }
-        public bool isFiring { get; private set; }
-        public Vector2 aimRotation { get; private set; }
+        public Vector2 rotationValue { get; set; }
+        public Vector2 move{ get; set; }
+        public bool isFiring { get; set; }
+        public Vector2 aimRotation { get; set; }
         public void OnMove(InputAction.CallbackContext context)
         {
             MoveInput(context.ReadValue<Vector2>());

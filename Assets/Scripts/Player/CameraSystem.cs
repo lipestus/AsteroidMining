@@ -6,37 +6,46 @@ namespace AsteroidMining.PlayerController
 {
     public class CameraSystem : MonoBehaviour
     {
+        [SerializeField] private InputHandler input;
         [SerializeField] private Transform follow;
         [SerializeField] private Vector3 offset;
+        //[SerializeField] private Vector3 analogInputOffset;
         [Range(1, 10)] [SerializeField] private float smoothFollow = 8f;
         [Range(1, 10)] [SerializeField] private float smoothShift = 8f;
         private float zAxis => -10;
         [SerializeField] private InputHandler playerConfig;
-        private Vector3 focusPosition => new Vector3(follow.position.x, follow.position.y, -10) 
+
+        private Vector3 focusPosition => new Vector3(follow.position.x, follow.position.y, -10)
                                          + new Vector3(offset.x, offset.y, zAxis);
         private float delay = 1f;
+        private void Update()
+        {
+            if(input.aimRotation.normalized.sqrMagnitude > 1)
+                offset = new Vector3(input.aimRotation.x, input.aimRotation.y, 0) * 2f;
+        }
         private void LateUpdate()
         {
             SmoothFollow();
 
-            if (/*!playerConfig.IsShooting*/ true)
-            {
-                if (playerConfig.move.y > 0)
-                {
-                    ShiftCamera(3f, smoothShift);
-                    Invoke(nameof(ResetValue), 1f);
-                }
-                else if (playerConfig.move.y < 1)
-                {
-                    if (delay > 0f)
-                    {
-                        delay -= Time.deltaTime;
-                        return;
-                    }
-                    float pace = 1.8f;
-                    ShiftCamera(0f, pace);
-                }
-            }
+            // if (/*!playerConfig.IsShooting*/ true)
+            // {
+            //     if (playerConfig.move.y > 0)
+            //     {
+            //         ShiftCamera(3f, smoothShift);
+            //         Invoke(nameof(ResetValue), 1f);
+            //     }
+            //     else if (playerConfig.move.y < 1)
+            //     {
+            //         if (delay > 0f)
+            //         {
+            //             delay -= Time.deltaTime;
+            //             return;
+            //         }
+            //         float pace = 1.8f;
+            //         ShiftCamera(0f, pace);
+            //     }
+            // }
+       
         }
         private void SmoothFollow()
         {

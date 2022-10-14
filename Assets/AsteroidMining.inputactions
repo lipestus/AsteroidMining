@@ -111,17 +111,6 @@
                 },
                 {
                     "name": "",
-                    "id": "c91ddd72-b62d-4d63-8c78-f01a26c74f55",
-                    "path": "<Mouse>/position",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "Aim",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "ee55e27f-c0aa-4c14-8a63-591570391671",
                     "path": "<Gamepad>/rightStick",
                     "interactions": "",

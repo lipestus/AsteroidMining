@@ -27,7 +27,6 @@ namespace AsteroidMining.PlayerController
         private float clampMinValue;
         private float normalizedTime;
         private float duration = 1f;
-
         private void Update()
         {
             turnInput = input.rotationValue.normalized.sqrMagnitude;
