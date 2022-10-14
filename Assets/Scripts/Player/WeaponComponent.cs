@@ -20,6 +20,9 @@ public class WeaponComponent : MonoBehaviour
     private Vector3 mousePosition;
     private float lastShot = 0.0f;
     private BulletSpawner bulletSpawner;
+    private Quaternion rotation;
+    private Quaternion lastRotationValue;
+    private float aimInput;
 
     private void Awake()
     {
@@ -39,10 +42,20 @@ public class WeaponComponent : MonoBehaviour
     }
     private void LateUpdate()
     {
-        float angle = Mathf.Atan2(input.aimRotation.x, input.aimRotation.y) * Mathf.Rad2Deg;
-        Quaternion rotation = Quaternion.AngleAxis(-angle, Vector3.forward);
-        aimTransform.rotation = Quaternion.Slerp(aimTransform.rotation, rotation,
-            rotationSpeed * Time.deltaTime);
+        aimInput = input.aimRotation.normalized.sqrMagnitude;
+        if (aimInput > 0)
+        {
+            float angle = Mathf.Atan2(input.aimRotation.x, input.aimRotation.y) * Mathf.Rad2Deg;
+            rotation = Quaternion.AngleAxis(-angle, Vector3.forward);
+            aimTransform.rotation = Quaternion.Slerp(aimTransform.rotation, rotation,
+                rotationSpeed * Time.deltaTime);
+            lastRotationValue = rotation;
+        }
+        else
+        {
+            rotation = lastRotationValue;
+        }
+      
     }
 
     private void RotateGunTowardsPoint(Vector3 point, float rotationSpeed)

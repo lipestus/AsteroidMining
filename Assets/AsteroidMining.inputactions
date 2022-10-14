@@ -9,8 +9,8 @@
                     "name": "Move",
                     "type": "Value",
                     "id": "4e076afe-6816-40fa-9168-ed6ef437eb3c",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
+                    "expectedControlType": "Analog",
+                    "processors": "AxisDeadzone",
                     "interactions": "",
                     "initialStateCheck": true
                 },
@@ -106,17 +106,6 @@
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
                     "action": "Fire",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "c91ddd72-b62d-4d63-8c78-f01a26c74f55",
-                    "path": "<Mouse>/position",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "Aim",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
