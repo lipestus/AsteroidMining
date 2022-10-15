@@ -14,9 +14,9 @@ namespace AsteroidMining.PlayerController
         [Range(1, 100)] [SerializeField] private float smoothFollow = 8f;
         [Range(1, 100)] [SerializeField] private float smoothShift = 8f;
         private float zAxis => -10;
+
         private Vector3 focusPosition => new Vector3(follow.position.x, follow.position.y, zAxis)
-                                         + new Vector3(offset.x, offset.y, 0)
-                                         + forwardDirection;
+                                         + new Vector3(offset.x, offset.y, 0);
         private float delay = 1f;
         private Vector3 forwardDirection;
         public float currentTime;
@@ -24,7 +24,7 @@ namespace AsteroidMining.PlayerController
         private float duration = 1f;
         private void LateUpdate()
         {
-            forwardDirection = follow.rotation * Vector3.up * 1.5f;
+            forwardDirection = follow.rotation * Vector3.up * 2f;
             float moveInput = input.move.normalized.sqrMagnitude;
             if (moveInput > 0)
             {
@@ -36,14 +36,14 @@ namespace AsteroidMining.PlayerController
                 normalizedTime = 0;
                 currentTime = 0;
                 Vector3 smoothShiftVector = Vector3.Lerp(offset, 
-                    forwardDirection, 1.5f * Time.deltaTime);
+                    forwardDirection, 0.5f * Time.deltaTime);
                 offset = smoothShiftVector;
             }
 
             if (normalizedTime > 1)
             {
                 Vector3 smoothShiftVector = Vector3.Lerp(offset, 
-                    forwardDirection * 2, 2f * Time.deltaTime);
+                    forwardDirection * 3.5f, 0.5f * Time.deltaTime);
                 offset = smoothShiftVector;
             }
             
