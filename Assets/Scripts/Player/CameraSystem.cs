@@ -15,20 +15,16 @@ namespace AsteroidMining.PlayerController
         [Range(1, 100)] [SerializeField] private float smoothShift = 8f;
         private float zAxis => -10;
         private Vector3 focusPosition => new Vector3(follow.position.x, follow.position.y, zAxis)
-                                         + new Vector3(offset.x, offset.y, 0);
+                                         + new Vector3(offset.x, offset.y, 0)
+                                         + forwardDirection;
         private float delay = 1f;
         private Vector3 forwardDirection;
         public float currentTime;
         private float normalizedTime;
         private float duration = 1f;
-        private void OnDrawGizmos()
-        {
-            Gizmos.color = Color.yellow;
-            Gizmos.DrawLine(follow.position, 
-                new Vector3(follow.position.x, follow.position.y, -10) + forwardDirection * 3);
-        }
         private void LateUpdate()
         {
+            forwardDirection = follow.rotation * Vector3.up * 1.5f;
             float moveInput = input.move.normalized.sqrMagnitude;
             if (moveInput > 0)
             {
@@ -40,17 +36,17 @@ namespace AsteroidMining.PlayerController
                 normalizedTime = 0;
                 currentTime = 0;
                 Vector3 smoothShiftVector = Vector3.Lerp(offset, 
-                    Vector3.zero, 1.5f * Time.deltaTime);
+                    forwardDirection, 1.5f * Time.deltaTime);
                 offset = smoothShiftVector;
             }
 
             if (normalizedTime > 1)
             {
                 Vector3 smoothShiftVector = Vector3.Lerp(offset, 
-                    new Vector3(input.move.x, input.move.y, offset.z) * 5.5f, 2f * Time.deltaTime);
+                    forwardDirection * 2, 2f * Time.deltaTime);
                 offset = smoothShiftVector;
             }
-            //forwardDirection = follow.rotation * Vector3.up;
+            
             //SmoothFollow();
 
             // if (/*!playerConfig.IsShooting*/ true)
